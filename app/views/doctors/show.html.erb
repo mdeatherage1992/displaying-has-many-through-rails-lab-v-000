@@ -3,3 +3,6 @@
   <% patient = appt.patient %>
   <% time = appt.appointment_datetime.to_formatted_s(:long) %>
   <%time.insert(-6, "at ") %>
+  <li><%= link_to pat.name, pat%><%= time %></li>
+  <% end %>
+</ul>
