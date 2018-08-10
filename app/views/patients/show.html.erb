@@ -1,0 +1,8 @@
+<ul>
+  <% @appointments.each do |appt| %>
+  <% doctor = appt.doctor %>
+  <% time = appt.appointment_datetime.to_formatted_s(:long) %>
+  <% time.insert(-6, "at ") %>
+  <li><%= link_to doctor.name, doctor %><%= time %></li>
+  <% end %> 
+</ul>
