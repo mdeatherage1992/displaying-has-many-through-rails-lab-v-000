@@ -1,0 +1,5 @@
+<ul>
+  <% @appointments.each do |appt| %>
+  <% patient = appt.patient %>
+  <% time = appt.appointment_datetime.to_formatted_s(:long) %>
+  <%time.insert(-6, "at ") %>
